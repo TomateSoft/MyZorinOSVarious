@@ -1,0 +1,7 @@
+[Unit]
+Description=A short description for your script or service
+After=network.target
+
+[Service]
+User=jeremyc
+ExecStart=curl -G -o /home/jeremyc/.cache/weather.json 'https://api.openweathermap.org/data/2.5/onecall?lat=32.3336111&lon=34.8577766&appid=<CHANGE_ME>&units=metric'

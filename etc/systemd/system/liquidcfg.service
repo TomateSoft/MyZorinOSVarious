@@ -1,0 +1,12 @@
+[Unit]
+Description=AIO startup service
+
+[Service]
+Type=oneshot
+ExecStart=liquidctl initialize all
+ExecStart=liquidctl --match kraken set ring color loading a347ba --speed faster
+ExecStart=liquidctl --match kraken set logo color fixed ff0000
+ExecStart=liquidctl --match gigabyte set sync color fixed a347ba
+
+[Install]
+WantedBy=default.target
